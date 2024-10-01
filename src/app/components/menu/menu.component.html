@@ -1,0 +1,25 @@
+<nav>
+    <ul *ngIf="recolher === false else exibir " class="menu-grid">
+      <li><a routerLink="/menu">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contato</a></li>
+      <li (click)="clickRecolher()"><a href="#">recolher</a></li>
+    </ul>
+  </nav>
+
+  <ng-template #exibir>
+    <button (click)="clickRecolher()">exibir</button>
+  </ng-template>
+  
+
+<div *ngIf="menu === true else menu2  " (click)="click()">
+exibir
+</div>
+
+<ng-template #menu2 >
+ <div (click)="click()">eee</div>
+</ng-template>
+
+  
