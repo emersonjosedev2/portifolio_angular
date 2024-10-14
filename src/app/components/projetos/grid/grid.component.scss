@@ -1,0 +1,26 @@
+.grid-container {
+
+    padding-bottom: 200px;
+    display: grid;
+   /*  grid-template-columns: minmax(50px, 400px) 200px 200px; */ /* quantas colunas e o tamanho delas *
+    minmax tamanho minimo e maximo do item/
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /* column-gap: 2em; gap de coluna */
+    /* row-gap: 2em; gap de linha */
+    gap: 1em /* gap geral */;
+    grid-template-columns: repeat(2, 200px) ;
+    align-items: center;
+
+
+    .grid-item {
+      background-color: royalblue;
+      padding: 1rem;
+    }
+  
+    // Aplica o estilo aos elementos pares diretamente dentro de .grid-container
+    .grid-item:nth-child(even) {
+      background-color: skyblue;
+    }
+  }
+  

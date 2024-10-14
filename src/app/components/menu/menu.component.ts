@@ -8,11 +8,25 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   menu = true
   recolher = false
+  counter = 0
+  classTolbar = ['on', 'off']
   click(){
     this.menu = !this.menu
     console.log(this.menu)
   }
   clickRecolher(){
     this.recolher = !this.recolher
+   
+    if(this.counter === 0){
+      this.counter ++
+     
+     
+    
+    }
+   else{
+    this.counter --
+   }
+   console.log(this.counter)
+   
   }
 }

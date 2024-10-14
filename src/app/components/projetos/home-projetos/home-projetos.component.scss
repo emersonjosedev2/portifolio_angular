@@ -1,0 +1,14 @@
+.grid-container{
+  display: grid;
+  grid-template-columns:  200px minmax(200px,200px) 200px;
+  gap: 10px;
+  text-align: center;  
+.grid-item{
+    background-color: red;
+    overflow: auto;
+   
+
+}
+
+}
+

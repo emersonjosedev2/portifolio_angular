@@ -1,25 +1,17 @@
 <nav>
     <ul *ngIf="recolher === false else exibir " class="menu-grid">
-      <li><a routerLink="/menu">Home</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Serviços</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contato</a></li>
-      <li (click)="clickRecolher()"><a href="#">recolher</a></li>
+      <li (click)="clickRecolher()"><a href="#"><mat-icon matTooltip="Menu">menu</mat-icon></a></li>
+      <li ><img src="/src/assets/imgs/logoEmerson.png.png" alt=""></li>
+      <li><a routerLink=""><mat-icon matTooltip="Home">home</mat-icon></a></li>
+      <li><a routerLink="grid">Sobre</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a routerLink="home-projetos">Projetos</a></li>
+      <li><a routerLink="home-projetos">Contato</a></li>
+     
+     
     </ul>
   </nav>
 
   <ng-template #exibir>
-    <button (click)="clickRecolher()">exibir</button>
+    <mat-icon [ngClass]="classTolbar[counter]" (click)="clickRecolher()" matTooltip="Menu">menu</mat-icon>
   </ng-template>
-  
-
-<div *ngIf="menu === true else menu2  " (click)="click()">
-exibir
-</div>
-
-<ng-template #menu2 >
- <div (click)="click()">eee</div>
-</ng-template>
-
-  
